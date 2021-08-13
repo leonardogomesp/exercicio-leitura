@@ -7,11 +7,21 @@ const leitura = database.split("\n")
 //Nome:
 //Tipo:
 //Falta quantos niveis para evoluir? 
-
+    var objeto;
 for(i= 0; i< leitura.length; i++){
     //console.log(leitura[i])
-    var objeto = leitura[i].split('-')
-    console.log("Nome: " + objeto[0] + "- Nível" + objeto[1] + "\nTipo: " + objeto[2] + "Ataque: " + objeto[3] + "\nFalta quantos níveis para evoluir?: ")
+    objeto = leitura[i].split('-')
+    let evoluindo = parseFloat.objeto[1] - 13
+    console.log("Nome: " + objeto[0] + "- Nível" + objeto[1] + "\nTipo: " + objeto[2] + "Ataque: " + objeto[3] + `\nFalta quantos níveis para evoluir?: ${evoluindo} `)
+}
+function evolucao(){
+   if (objeto[1] < 16 objeto[4]){
+       objeto[1] - objeto[4]
+
+
+   }else{
+
+   }
 }
 
 
