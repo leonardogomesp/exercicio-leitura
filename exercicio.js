@@ -1,15 +1,17 @@
+const evoluiComPedra = require('./pokemon-evolucao-pedra')
 const fs = require("fs")
 const database = fs.readFileSync('./novo-arquivo2', `utf-8`)
 const leitura = database.split("\n")
+console.log(evoluiComPedra)
 
 function primeiraLetraMaiuscula(palavra) {
     const palavraSemEspaco = palavra.trim()
-    return palavraSemEspaco[0].toUpperCase() + palavraSemEspaco.slice(1).toLowerCase()  
+    return palavraSemEspaco[0].toUpperCase() + palavraSemEspaco.slice(1).toLowerCase()
 }
 
 
 function faltaEvoluir(objeto) {
-    if (objeto[0].trim() === "pikachu") {
+    if (objeto[0].trim() === evoluiComPedra) {
         return "Evolui com pedra!"
     }
     return 16 - obterNivel(objeto)
@@ -39,5 +41,10 @@ function main(pokemon) {
         pokemon = leitura[i].split('-')
         imprimir(pokemon)
     }
+
 }
-return main()
+for (i = 0; i < evoluiComPedra.length; i++) {
+    pokemon = evoluiComPedra[i]
+    console.log(pokemon)
+}
+//return main()

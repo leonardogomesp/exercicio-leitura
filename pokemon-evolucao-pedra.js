@@ -34,3 +34,4 @@ const pokemons = [
     "lampent",
     "doublade",
 ]
+module.exports = pokemons
