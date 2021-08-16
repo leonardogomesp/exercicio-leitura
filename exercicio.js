@@ -3,27 +3,27 @@ const database = fs.readFileSync('./novo-arquivo2', `utf-8`)
 const leitura = database.split("\n")
 //console.log(leitura.length)
 
-function pikachu() {  
-    const objeto = ["", "", "", "", ""];     
-    if (objeto[4].indexOf("evolui com pedra")) {
+function pikachu(objeto) {   
+    if (objeto[0].indexOf("pikachu")) {
         console.log("Evolui com pedra!")
     }
 }
 
 function imprimir(objeto) {
 
-    //console.log("Nome: " + objeto[0] + " - Nível" + objeto[1])
-    //console.log("Tipo: " + objeto[2] + "/ Ataque: " + objeto[3])
-    //console.log(`Falta quantos níveis para evoluir? ${evoluindo}` + '\n')
+    console.log("Nome: " + objeto[0] + " - Nível " + obterNivel(objeto)) 
+    console.log("Tipo: " + objeto[2] + "/ Ataque: " + objeto[3])
+    console.log(`Falta quantos níveis para evoluir? ` + faltaEvoluir(objeto) + "\n")
     
 }
-
+function faltaEvoluir(objeto){
+    return 16 - obterNivel(objeto)
+} 
 //  nome: obterNivel
 // entrada: Nv1000
 // saida: 1000
 function obterNivel(objeto){
-    objeto[1].substring(1)
-    console.log(objeto[1])
+    return parseInt(objeto[1].substring(3))
 }
 
 let objeto;
