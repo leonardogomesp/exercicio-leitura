@@ -3,8 +3,10 @@ const database = fs.readFileSync('./novo-arquivo2', `utf-8`)
 const leitura = database.split("\n")
 
 function primeiraLetraMaiuscula(palavra) {
-    return palavra[0].toUpperCase() + palavra.slice(1).toLowerCase()
+    const palavraSemEspaco = palavra.trim()
+    return palavraSemEspaco[0].toUpperCase() + palavraSemEspaco.slice(1).toLowerCase()  
 }
+
 
 function faltaEvoluir(objeto) {
     if (objeto[0].trim() === "pikachu") {
@@ -22,8 +24,8 @@ function imprimir(pokemon) {
 
     const nomePokemon = primeiraLetraMaiuscula(pokemon[0])
     const nivel = obterNivel(pokemon)
-    const tipo = pokemon[2]
-    const ataque = pokemon[3]
+    const tipo = primeiraLetraMaiuscula(pokemon[2])
+    const ataque = primeiraLetraMaiuscula(pokemon[3])
     const evolucao = faltaEvoluir(pokemon)
 
     console.log(`Nome: ${nomePokemon} - Nível ${nivel}`)
