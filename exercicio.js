@@ -45,6 +45,6 @@ function main(pokemon) {
 }
 for (i = 0; i < evoluiComPedra.length; i++) {
     pokemon = evoluiComPedra[i]
-    console.log(pokemon)
+    console.log(primeiraLetraMaiuscula(pokemon))
 }
 //return main()
